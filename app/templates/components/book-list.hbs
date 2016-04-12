@@ -3,16 +3,7 @@
 <ul>
 {{#each books as |book|}}
     <li id={{book.id}}>
-        {{book.name}} - {{book.author}}
-        {{#if isDetail}}
-            <br>
-            {{book.desc}}
-            <br>
-            <button type="button" class="btn btn-sm" {{action "hideDetail"}}>Collapse</button>
-        {{else}}
-            <button type="button" class="btn btn-sm" {{action "showDetail"}}>Show more</button>
-        {{/if}}
-        
+        {{book-detail book=book}}
     </li>
 {{/each}}
 </ul>
