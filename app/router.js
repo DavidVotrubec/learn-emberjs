@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('programmers');
   this.route('about');
   this.route('contact');
+  this.route('books');
 });
 
 export default Router;
