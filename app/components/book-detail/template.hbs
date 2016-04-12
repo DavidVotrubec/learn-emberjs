@@ -1,12 +1,14 @@
-{{book.name}} - {{book.author}}
-<br>
-Type: {{book-type book.binding}} {{book.binding}}
+<div class="book-detail">
+    {{book.name}} - {{book.author}}
+    <br>
+    Type: {{book-type book.binding}} {{book.binding}}
 
-{{#if isDetail}}
-    <br>
-    {{book.desc}} - {{book.year}}
-    <br>
-    <button type="button" class="btn btn-sm" {{action "hideDetail"}}>Collapse</button>
-{{else}}
-    <button type="button" class="btn btn-sm" {{action "showDetail"}}>Show more</button>
-{{/if}}
+    {{#if isDetail}}
+        <br>
+        {{book.desc}} - {{book.year}}
+        <br>
+        <button type="button" class="btn btn-sm" {{action "hideDetail"}}>Collapse</button>
+    {{else}}
+        <button type="button" class="btn btn-sm" {{action "showDetail"}}>Show more</button>
+    {{/if}}
+</div>

@@ -105,12 +105,12 @@ export default function() {
                     desc: 'those who do not have inner moral compass need external compass'
                 }
             },
-        ]
+        ];
       
       return {
           data: books
         }; 
-  })
+  });
 }
 
 /*
