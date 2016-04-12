@@ -81,7 +81,8 @@ export default function() {
                 id: '1',
                 attributes: {
                     name: 'EmberJS',
-                    author: 'Yehuda Katz'   
+                    author: 'Yehuda Katz',
+                    desc: 'test description'   
                 }
             },
             {
@@ -89,7 +90,8 @@ export default function() {
                 id: '2',
                 attributes: {
                     name: 'AngularJs',
-                    author: 'Misko Hevery'   
+                    author: 'Misko Hevery',
+                    desc: 'My past 2 years'  
                 }
             },
             {
@@ -98,7 +100,8 @@ export default function() {
                 attributes: {
                     name: 'Bible',
                     author: 'ton of people',
-                    year: 0   
+                    year: 0,
+                    desc: 'those who do not have inner moral compass need external compass'
                 }
             },
         ]
