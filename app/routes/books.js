@@ -2,14 +2,14 @@ import Ember from 'ember';
 
 const books = [
     {
-        Id: '1',
-        Name: 'EmberJS',
-        Author: 'Yehuda Katz'
+        id: '1',
+        name: 'EmberJS',
+        author: 'Yehuda Katz'
     },
     {
-        Id: '2',
-        Name: 'Bible',
-        Author: 'ton of people'
+        id: '2',
+        name: 'Bible',
+        author: 'ton of people'
     },
 ]
 
