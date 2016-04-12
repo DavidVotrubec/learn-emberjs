@@ -72,6 +72,41 @@ export default function() {
     });
 
   */
+  
+  this.get('books', function() {
+            
+        const books = [
+            {
+                type: 'books',
+                id: '1',
+                attributes: {
+                    name: 'EmberJS',
+                    author: 'Yehuda Katz'   
+                }
+            },
+            {
+                type: 'books',
+                id: '2',
+                attributes: {
+                    name: 'AngularJs',
+                    author: 'Misko Hevery'   
+                }
+            },
+            {
+                type: 'books',
+                id: '3',
+                attributes: {
+                    name: 'Bible',
+                    author: 'ton of people',
+                    year: 0   
+                }
+            },
+        ]
+      
+      return {
+          data: books
+        }; 
+  })
 }
 
 /*
