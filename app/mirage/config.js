@@ -82,7 +82,8 @@ export default function() {
                 attributes: {
                     name: 'EmberJS',
                     author: 'Yehuda Katz',
-                    desc: 'test description'   
+                    desc: 'test description',
+                    binding: 'paperback'   
                 }
             },
             {

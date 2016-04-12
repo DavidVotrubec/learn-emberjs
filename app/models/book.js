@@ -6,4 +6,5 @@ export default DS.Model.extend({
   year: DS.attr(),
   language: DS.attr(),
   desc: DS.attr(),
+  binding: DS.attr(),
 });
