@@ -1,15 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-    filteredList: null,
     actions: {
-        autoComplete(param) {
+        autoComplete(param) {    
             if (param !== '') {
                 this.store.query('book', { name: param }).then((result) => {
                     this.set('filteredList', result);
                 });
             } else {
-                this.set('filteredList', null);
+                this.set('filteredList', this.get('model'));
             }
         },
         search(param) {

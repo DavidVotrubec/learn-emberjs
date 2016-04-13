@@ -73,10 +73,8 @@ export default function() {
 
   */
   
-  this.get('books', function(params) {
-           
-        console.log('books params', params);   
-         
+  this.get('books', function(db, request) {
+                    
         const books = [
             {
                 type: 'books',
@@ -138,9 +136,15 @@ export default function() {
             },
         ];
       
-      return {
-          data: books
-        }; 
+        if (request.queryParams.name !== undefined) {
+            let filteredBooks = books.filter(function(i) {
+                return i.attributes.name.toLowerCase().indexOf(request.queryParams.name.toLowerCase()) !== -1;
+            });
+            return { data: filteredBooks };
+        }
+        else {
+            return { data: books };
+        }
   });
 }
 
