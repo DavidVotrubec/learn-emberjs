@@ -10,8 +10,4 @@ export default Ember.Component.extend({
             this.set('isDetail', false);
         }
     },
-    
-    alertMsg() {
-        alert('zlo ' + this.get('id'));
-    }
 });

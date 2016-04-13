@@ -1,1 +1,4 @@
-{{book-list title="List of books" books=model}}
+{{filter-listing filteredList=model
+  autoComplete=(action 'autoComplete') search=(action 'search')}}
+
+{{book-list title="List of books" books=filteredList}}

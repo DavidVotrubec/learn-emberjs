@@ -73,8 +73,10 @@ export default function() {
 
   */
   
-  this.get('books', function() {
-            
+  this.get('books', function(params) {
+           
+        console.log('books params', params);   
+         
         const books = [
             {
                 type: 'books',
@@ -98,6 +100,35 @@ export default function() {
             {
                 type: 'books',
                 id: '3',
+                attributes: {
+                    name: 'Bible',
+                    author: 'ton of people',
+                    year: 0,
+                    desc: 'those who do not have inner moral compass need external compass'
+                }
+            },
+             {
+                type: 'books',
+                id: '4',
+                attributes: {
+                    name: 'EmberJS',
+                    author: 'Yehuda Katz',
+                    desc: 'test description',
+                    binding: 'paperback'   
+                }
+            },
+            {
+                type: 'books',
+                id: '5',
+                attributes: {
+                    name: 'AngularJs',
+                    author: 'Misko Hevery',
+                    desc: 'My past 2 years'  
+                }
+            },
+            {
+                type: 'books',
+                id: '6',
                 attributes: {
                     name: 'Bible',
                     author: 'ton of people',
