@@ -54,3 +54,4 @@ Specify what it takes to deploy your app.
 ## My notes
  * [Ember-cli in Visual Studio Code] (https://marketplace.visualstudio.com/items?itemName=felixrieseberg.vsc-ember-cli)
  * [EmberWatch - videos about EmberJs] (http://emberwatch.com/)
+ * [Deploy via surge.sh - tool for static websites] (http://surge.sh/)
