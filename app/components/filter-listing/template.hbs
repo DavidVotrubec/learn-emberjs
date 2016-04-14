@@ -1,3 +1,5 @@
-Search book by name:
-{{input value=filter key-up=(action 'autoComplete') placeholder="Search ..."}}
-<button {{action 'search'}}>Search</button>
+<div class="ui input">
+    <label>Search book by name:</label>
+    {{input value=filter key-up=(action 'autoComplete') placeholder="Search ..."}}
+</div>
+<button class="ui button" {{action 'search'}}>Search</button>
