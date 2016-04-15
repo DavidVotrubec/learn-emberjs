@@ -5,6 +5,12 @@ export default Ember.Route.extend({
         return this.store.findAll('book');
     },
     
+    actions: {
+        save: () => {
+            alert('saving');
+        }
+    },
+    
     redirect: function () {
         this.transitionTo('books.list');
     }
