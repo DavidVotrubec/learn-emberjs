@@ -83,7 +83,8 @@ export default function() {
                     name: 'EmberJS',
                     author: 'Yehuda Katz',
                     desc: 'test description',
-                    binding: 'paperback'   
+                    binding: 'paperback',   
+                    year: '2016'
                 }
             },
             {
@@ -92,7 +93,8 @@ export default function() {
                 attributes: {
                     name: 'AngularJs',
                     author: 'Misko Hevery',
-                    desc: 'My past 2 years'  
+                    desc: 'My past 2 years',
+                    year: '2010'
                 }
             },
             {

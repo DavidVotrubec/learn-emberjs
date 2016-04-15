@@ -2,13 +2,16 @@
     {{book.name}} - {{book.author}}
     <br>
     Type: {{book-type book.binding}} {{book.binding}}
+    <br>
+    <br>
+    Fullname as computed property {{book.fullName}}
 
     {{#if isDetail}}
         <br>
         {{book.desc}} - {{book.year}}
         <br>
-        <button type="button" class="btn btn-sm" {{action "hideDetail"}}>Collapse</button>
+        <button type="button" class="ui button" {{action "hideDetail"}}>Show less</button>
     {{else}}
-        <button type="button" class="btn btn-sm" {{action "showDetail"}}>Show more</button>
+        <button type="button" class="ui button" {{action "showDetail"}}>Show more</button>
     {{/if}}
 </div>
