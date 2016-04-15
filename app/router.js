@@ -10,7 +10,10 @@ Router.map(function() {
   this.route('programmers');
   this.route('about');
   this.route('contact');
-  this.route('books');
+  this.route('books', function() {
+    this.route('new');
+    this.route('list');
+  });
 });
 
 export default Router;

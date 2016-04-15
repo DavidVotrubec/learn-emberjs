@@ -1,4 +1,8 @@
 {{filter-listing filter=filter
   autoComplete=(action 'autoComplete') search=(action 'search')}}
+  
+{{#link-to "books.new" class="ui button"}}
+   Add new book
+ {{/link-to}}
 
-{{book-list title="List of books" books=filteredList}}
+{{outlet}}
