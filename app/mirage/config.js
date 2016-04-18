@@ -150,8 +150,13 @@ export default function() {
   }); // end of get.books
   
   this.post('books', function (db, request) {
-      console.log('book to be saved in db', request.requestBody);
-      const newBook = JSON.parse(request.requestBody); 
+      //console.log('book to be saved in db', request.requestBody);
+      const newBookObj = JSON.parse(request.requestBody); 
+      console.log('book to be saved in db', newBookObj);
+      const newBook = newBookObj.data;
+      newBook.id = Math.random(1000, 9999);
+      
+      books.push(newBook);
       
       return {data: books};
   })
