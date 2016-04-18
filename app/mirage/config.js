@@ -73,71 +73,71 @@ export default function() {
 
   */
   
+  const books = [
+    {
+        type: 'books',
+        id: '1',
+        attributes: {
+            name: 'EmberJS',
+            author: 'Yehuda Katz',
+            desc: 'test description',
+            binding: 'paperback',   
+            year: '2016'
+        }
+    },
+    {
+        type: 'books',
+        id: '2',
+        attributes: {
+            name: 'AngularJs',
+            author: 'Misko Hevery',
+            desc: 'My past 2 years',
+            year: '2010'
+        }
+    },
+    {
+        type: 'books',
+        id: '3',
+        attributes: {
+            name: 'Bible',
+            author: 'ton of people',
+            year: 0,
+            desc: 'those who do not have inner moral compass need external compass'
+        }
+    },
+        {
+        type: 'books',
+        id: '4',
+        attributes: {
+            name: 'EmberJS',
+            author: 'Yehuda Katz',
+            desc: 'test description',
+            binding: 'paperback'   
+        }
+    },
+    {
+        type: 'books',
+        id: '5',
+        attributes: {
+            name: 'AngularJs',
+            author: 'Misko Hevery',
+            desc: 'My past 2 years'  
+        }
+    },
+    {
+        type: 'books',
+        id: '6',
+        attributes: {
+            name: 'Bible',
+            author: 'ton of people',
+            year: 0,
+            desc: 'those who do not have inner moral compass need external compass'
+        }
+    },
+];
+  
   this.get('books', function(db, request) {
-                    
-        const books = [
-            {
-                type: 'books',
-                id: '1',
-                attributes: {
-                    name: 'EmberJS',
-                    author: 'Yehuda Katz',
-                    desc: 'test description',
-                    binding: 'paperback',   
-                    year: '2016'
-                }
-            },
-            {
-                type: 'books',
-                id: '2',
-                attributes: {
-                    name: 'AngularJs',
-                    author: 'Misko Hevery',
-                    desc: 'My past 2 years',
-                    year: '2010'
-                }
-            },
-            {
-                type: 'books',
-                id: '3',
-                attributes: {
-                    name: 'Bible',
-                    author: 'ton of people',
-                    year: 0,
-                    desc: 'those who do not have inner moral compass need external compass'
-                }
-            },
-             {
-                type: 'books',
-                id: '4',
-                attributes: {
-                    name: 'EmberJS',
-                    author: 'Yehuda Katz',
-                    desc: 'test description',
-                    binding: 'paperback'   
-                }
-            },
-            {
-                type: 'books',
-                id: '5',
-                attributes: {
-                    name: 'AngularJs',
-                    author: 'Misko Hevery',
-                    desc: 'My past 2 years'  
-                }
-            },
-            {
-                type: 'books',
-                id: '6',
-                attributes: {
-                    name: 'Bible',
-                    author: 'ton of people',
-                    year: 0,
-                    desc: 'those who do not have inner moral compass need external compass'
-                }
-            },
-        ];
-      
+               
         if (request.queryParams.name !== undefined) {
             let filteredBooks = books.filter(function(i) {
                 return i.attributes.name.toLowerCase().indexOf(request.queryParams.name.toLowerCase()) !== -1;
@@ -147,7 +147,14 @@ export default function() {
         else {
             return { data: books };
         }
-  });
+  }); // end of get.books
+  
+  this.post('books', function (db, request) {
+      console.log('book to be saved in db', request.requestBody);
+      const newBook = JSON.parse(request.requestBody); 
+      
+      return {data: books};
+  })
 }
 
 /*

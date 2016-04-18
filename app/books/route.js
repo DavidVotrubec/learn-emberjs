@@ -6,8 +6,15 @@ export default Ember.Route.extend({
     },
     
     actions: {
-        save: () => {
-            alert('saving');
+        save() {
+            var post = this.store.createRecord('book', {
+                name: 'new book ' + new Date(),
+                author: 'David Votrubec'
+            });
+
+            post.save().then(() => {
+                this.transitionTo('books.list');
+            });
         }
     },
     
